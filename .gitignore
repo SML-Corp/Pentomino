@@ -1,0 +1,30 @@
+# --- Obsidian 関連 ---
+# Obsidianの設定フォルダ（プラグインや閲覧履歴など、個人設定なので共有不要）
+.obsidian/
+# ゴミ箱フォルダ
+.trash/
+
+# --- 作業用フォルダ ---
+# 先ほどお話しした「非公開・作業用」フォルダ
+_work/
+
+# --- Apple / Pages 関連 ---
+# Pagesが生成する一時ファイルや、Mac特有の管理ファイル
+.DS_Store
+$!/
+.LSOverride
+*.pages
+# Pagesの自動保存やバックアップ（必要に応じて）
+.AppleDouble
+.LSOverride
+
+# --- Microsoft Office (Excel等) ---
+# 作業中のテンポラリファイル (編集時に出る ~$ファイル名.xlsx など)
+~$*.xlsx
+~$*.docx
+
+# --- OS / エディタ関連 ---
+# VSCodeの設定（プロジェクト共通の設定を共有したい場合は除外してOK）
+.vscode/
+# Windowsのサムネイルキャッシュ
+Thumbs.db
