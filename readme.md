@@ -9,8 +9,7 @@ Pentomino（ペントミノ）および Tetracube（テトラキューブ）の�
 
 <div align="center">
 
-![[Pasted image 20260317170650.png]]
-
+![](Pasted%20image%2020260317173236.png)
 </div>
 
 | ファイル名                          | 形式  |                                                       リンク                                                       |
