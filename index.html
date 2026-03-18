@@ -1,224 +1,357 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pentomino Project by SML-Corp</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; }
-        h1, h2 { border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        .center-box { text-align: center; margin: 20px 0; }
-        img { max-width: 100%; height: auto; border: 1px solid #ccc; }
-        table {
-            border-collapse: collapse; /* 枠線を一本にする */
-            width: 100%;
-        }
-        th, td {
-            border: 1px solid #ccc; /* 灰色の線 */
-            padding: 8px;           /* 余白 */
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9; /* 1行おきに色をつける */
-        }
-        .download-btn { display: inline-block; padding: 5px 10px; background: #eee; border-radius: 4px; text-decoration: none; color: #333; }
-        .download-btn:hover { background: #ddd; }
+      body {
+        font-family: sans-serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        color: #333;
+      }
+      h1,
+      h2 {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+      }
+      .center-box {
+        text-align: center;
+        margin: 20px 0;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid #ccc;
+      }
+      table {
+        border-collapse: collapse; /* 枠線を一本にする */
+        width: 100%;
+      }
+      th,
+      td {
+        border: 1px solid #ccc; /* 灰色の線 */
+        padding: 8px; /* 余白 */
+      }
+      tr:nth-child(even) {
+        background-color: #f9f9f9; /* 1行おきに色をつける */
+      }
+      .download-btn {
+        display: inline-block;
+        padding: 5px 10px;
+        background: #eee;
+        border-radius: 4px;
+        text-decoration: none;
+        color: #333;
+      }
+      .download-btn:hover {
+        background: #ddd;
+      }
     </style>
-</head>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pentomino Project</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
-    
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
+    />
+
     <style>
-        /* ライブラリがベースを作ってくれるので、
+      /* ライブラリがベースを作ってくれるので、
            個別の微調整（センター寄せなど）だけここに書けばOKです 
         */
-        .center-box { text-align: center; margin: 2rem 0; }
-        img { border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+      .center-box {
+        text-align: center;
+        margin: 2rem 0;
+      }
+      img {
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <h1>Pentomino Project by SML-Corp</h1>
-    <p>Pentomino（ペントミノ）および Tetracube（テトラキューブ）のデータ公開ページです。</p>
+    <p>
+      Pentomino（ペントミノ）および
+      Tetracube（テトラキューブ）のデータ公開ページです。
+    </p>
 
     <h2>ペントミノ攻略本のサンプル</h2>
-    <p>ペントミノはかなり難しいので、長続きしません。6X10の箱に入れる問題の場合、答えは2,339通りも有りますが、
-        答えにならない組み合わせが山ほどあるので、仕方ありません。</p>
-    <p>2,339通りの答えはPythonと言うプログラミング言語を使って解きました。その答えから、2,339通りの問題集を作りました。
-        どの問題も必ずひとつの解答を持ちます。下記は問題のひとつです。
-        "Pentomino 6X10"と書かれているのはこの問題が6x10の箱に収める事を示しています。
-        次の"0047"は47番目の問題で、"L3"はレベル３で未収納ピースが３個と言う事です。
-        その３個のピースはＦ,Ｔ,Ｕの３個です。
+    <p>
+      ペントミノはかなり難しいので、長続きしません。6X10の箱に入れる問題の場合、答えは2,339通りも有りますが、
+      答えにならない組み合わせが山ほどあるので、仕方ありません。
+    </p>
+    <p>
+      2,339通りの答えはPythonと言うプログラミング言語を使って解きました。その答えから、2,339通りの問題集を作りました。
+      どの問題も必ずひとつの解答を持ちます。下記は問題のひとつです。 "Pentomino
+      6X10"と書かれているのはこの問題が6x10の箱に収める事を示しています。
+      次の"0047"は47番目の問題で、"L3"はレベル３で未収納ピースが３個と言う事です。
+      その３個のピースはＦ,Ｔ,Ｕの３個です。
     </p>
 
     <div class="center-box">
-        <img src="m022.png" width="440" alt="Pentomino Puzzle">
+      <img src="m022.png" width="440" alt="Pentomino Puzzle" />
     </div>
 
     <p>下図は問題0047の解答です。</p>
 
     <div class="center-box">
-        <img src="m023.png" width="440" alt="Pentomino Puzzle">
+      <img src="m023.png" width="440" alt="Pentomino Puzzle" />
     </div>
 
     <p>サンプル問題集は下記からダウンロードして下さい。</p>
 
     <table>
-        <thead>
-            <tr>
-                <th>ファイル名</th>
-                <th>形式</th>
-                <th>リンク</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Pentomino Quest Sample Edition</td>
-                <td>PDF</td>
-                <td><a class="download-btn" href="./00.documents/Pentomino%20Quest%20release%202025_05_19/Pentomino%20Quest%20Sample%20Edition.pdf">📥 Download</a></td>
-            </tr>
-        </tbody>
+      <thead>
+        <tr>
+          <th>ファイル名</th>
+          <th>形式</th>
+          <th>リンク</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Pentomino Quest Sample Edition</td>
+          <td>PDF</td>
+          <td>
+            <a
+              class="download-btn"
+              href="./00.documents/Pentomino%20Quest%20release%202025_05_19/Pentomino%20Quest%20Sample%20Edition.pdf"
+              >📥 Download</a
+            >
+          </td>
+        </tr>
+      </tbody>
     </table>
 
     <h2>3D Models (STL)</h2>
-    <p>ペントミノの３Ｄプリンタで製作する為のＳＴＬデータを開示します。
-    </p>
+    <p>ペントミノの３Ｄプリンタで製作する為のＳＴＬデータを開示します。</p>
     <h3>ペントミノ ピース</h3>
-    <p>ペントミノは立方体を５個平面上に並べたときの全組み合わせ１２個のピースで構成されます。
-        下図は、PenA14D12PCE.STL を印刷したときの仕上がり図です。立方体の組み合わせで、
-        各辺は14㎜となっています。
+    <p>
+      ペントミノは立方体を５個平面上に並べたときの全組み合わせ１２個のピースで構成されます。
+      下図は、PenA14D12PCE.STL
+      を印刷したときの仕上がり図です。立方体の組み合わせで、
+      各辺は14㎜となっています。
     </p>
 
     <div class="center-box">
-        <a href="./04.Pentomino/Pentomino14D/PenA14D12PCE.STL" download=”PenA14D12PCE.STL”>
-            <img src="./04.Pentomino/PenA14D12PCE.png" width="440" alt="Pentomino Puzzle" style="cursor: pointer;">
-            <p>※画像をクリックするとPenA14D12PCE.STLがダウンロードできます</p>
-        </a>
+      <a
+        href="./04.Pentomino/Pentomino14D/PenA14D12PCE.STL"
+        download="”PenA14D12PCE.STL”"
+      >
+        <img
+          src="./04.Pentomino/PenA14D12PCE.png"
+          width="440"
+          alt="Pentomino Puzzle"
+          style="cursor: pointer"
+        />
+        <p>※画像をクリックするとPenA14D12PCE.STLがダウンロードできます</p>
+      </a>
     </div>
 
-    <h3><br>
-        ペントミノ ケース</h3>
-    <p>12個のピースを収納するケースで、6X10の平面型と5X6X2、5X4X3の立体型があります。
-        これらのケースは身と蓋が同形になっています。
-    </p>
-    
-    <div class="center-box">
-        <a href="./04.Pentomino/PenA14C610B.png" download=”PenA14C610B.STL”>
-            <img src="./04.Pentomino/PenA14C610B.png" width="440" alt="Pentomino Puzzle" style="cursor: pointer;">
-            <p>※画像をクリックするとファイル(PenA14C610B.STL)がダウンロードできます</p>
-        </a>
-        
-    </div>
-
-   <div class="center-box">
-        <a href="./04.Pentomino/Pentomino14D/PenA14C562B.STL" download=”PenA14C562B.STL”>
-            <img src="./04.Pentomino/PenA14C562B.png" width="440" alt="Pentomino Puzzle" style="cursor: pointer;">
-            <p>※画像をクリックするとファイル(PenA14C562B.STL)がダウンロードできます</p>
-        </a>
-    </div>
-
-    <div class="center-box">
-        <a href="./04.Pentomino/Pentomino14D/PenA14C453C.STL" download=”PenA14C453C.STL”>
-            <img src="./04.Pentomino/PenA14C453C.png" width="440" alt="Pentomino Puzzle" style="cursor: pointer;">
-            <p>※画像をクリックするとファイル(PenA14C453C.STL)がダウンロードできます</p>
-        </a>
-    </div>
-
-    <h3><br>
-        BOX453とピースを３段に積んだ状態</h3>
-    <p>各辺が5,4,3の箱にピースを立てたり、寝かしたりして納めます。この解答は3.940個もあります。しかし、いくら遣っても答えは中々見つかりません。写真は納まった状態を示しています。</p>
-
-    <div class="center-box">
-        <img src="./04.Pentomino/BOX453-PCE12.jpg" width="600" alt="Pentomino Puzzle">
-    </div>
-
-    <p>収まった状態を外から見ても内側がどうなっているかが判りません。その構造を正確に表現したのが下図です。
-        3枚の格子が並んでいます。左の格子を下側とすれば、右の格子は上側ですが、その逆でも構いません。
-        面に水平に置いたピースは形が全部見えます。もちろん、裏と表があります。この問題では、ピースＺは立っています。
-        この問題はレベル３で、ＰＵＸが未収納です。答えは必ずひとつ有るので、安心してじっくり考えて下さい。
+    <h3>
+      <br />
+      ペントミノ ケース
+    </h3>
+    <p>
+      12個のピースを収納するケースで、6X10の平面型と5X6X2、5X4X3の立体型があります。
+      これらのケースは身と蓋が同形になっています。
     </p>
 
     <div class="center-box">
-        <img src="./04.Pentomino/P453-0025P.png" width="500" alt="Pentomino Puzzle">
+      <a href="./04.Pentomino/PenA14C610B.png" download="”PenA14C610B.STL”">
+        <img
+          src="./04.Pentomino/PenA14C610B.png"
+          width="440"
+          alt="Pentomino Puzzle"
+          style="cursor: pointer"
+        />
+        <p>
+          ※画像をクリックするとファイル(PenA14C610B.STL)がダウンロードできます
+        </p>
+      </a>
     </div>
 
-    <p>頭の体操です。特に立体認識力が強化されます。考え方は色々あります。順番としては、水平に置けるかどうかを最初に調べます。この場合、Ｐは水平に置ける場所が2カ所あります。３個並んだ部分を水平にする場合と立てる場合ですが、立てるとＷとの境目に飛び地となった空白が出来るので、３個がたての置き方は却下します。あとはＵとＸです。
-        ピースを使って、試して見るのも良いでしょう。下図は解答です。
+    <div class="center-box">
+      <a
+        href="./04.Pentomino/Pentomino14D/PenA14C562B.STL"
+        download="”PenA14C562B.STL”"
+      >
+        <img
+          src="./04.Pentomino/PenA14C562B.png"
+          width="440"
+          alt="Pentomino Puzzle"
+          style="cursor: pointer"
+        />
+        <p>
+          ※画像をクリックするとファイル(PenA14C562B.STL)がダウンロードできます
+        </p>
+      </a>
+    </div>
+
+    <div class="center-box">
+      <a
+        href="./04.Pentomino/Pentomino14D/PenA14C453C.STL"
+        download="”PenA14C453C.STL”"
+      >
+        <img
+          src="./04.Pentomino/PenA14C453C.png"
+          width="440"
+          alt="Pentomino Puzzle"
+          style="cursor: pointer"
+        />
+        <p>
+          ※画像をクリックするとファイル(PenA14C453C.STL)がダウンロードできます
+        </p>
+      </a>
+    </div>
+
+    <h3>
+      <br />
+      BOX453とピースを３段に積んだ状態
+    </h3>
+    <p>
+      各辺が5,4,3の箱にピースを立てたり、寝かしたりして納めます。この解答は3.940個もあります。しかし、いくら遣っても答えは中々見つかりません。写真は納まった状態を示しています。
     </p>
 
     <div class="center-box">
-        <img src="./04.Pentomino/P453-0025S.png" width="500" alt="Pentomino Puzzle">
+      <img
+        src="./04.Pentomino/BOX453-PCE12.jpg"
+        width="600"
+        alt="Pentomino Puzzle"
+      />
     </div>
 
-    <h2><br>テトラキューブ(Tetracube)</h2>
-    <p>ペントミノは立方体５個を平面に並べた組み合わせの１２種のピースを使います。
-        ペンタは５個を意味するラテン語のペンタから来ています。
-        ４個を意味するテトラでもテトラミノが有り、ピースは５種類です。この場合全部で２０個の立方体と
-        なりますが、４Ｘ５＝２０には綺麗に入りません。２セット分の４０ピースを使うと幾つかの解答が出来ます。<br>
-        ４個の立方体を平面に並べる代わりに立体に並べると８ピースのセットが出来ます。
-        このセットの事をテトラキューブと呼びます。テトラキューブを4X4X2の箱に収める仕方は695通りあります。
-        下図はテトラキューブの８ピースです。
+    <p>
+      収まった状態を外から見ても内側がどうなっているかが判りません。その構造を正確に表現したのが下図です。
+      3枚の格子が並んでいます。左の格子を下側とすれば、右の格子は上側ですが、その逆でも構いません。
+      面に水平に置いたピースは形が全部見えます。もちろん、裏と表があります。この問題では、ピースＺは立っています。
+      この問題はレベル３で、ＰＵＸが未収納です。答えは必ずひとつ有るので、安心してじっくり考えて下さい。
     </p>
 
     <div class="center-box">
-        <img src="02.Tetracube/Tetracube-8p.png" width="500" alt="Tetracube Image">
+      <img
+        src="./04.Pentomino/P453-0025P.png"
+        width="500"
+        alt="Pentomino Puzzle"
+      />
+    </div>
+
+    <p>
+      頭の体操です。特に立体認識力が強化されます。考え方は色々あります。順番としては、水平に置けるかどうかを最初に調べます。この場合、Ｐは水平に置ける場所が2カ所あります。３個並んだ部分を水平にする場合と立てる場合ですが、立てるとＷとの境目に飛び地となった空白が出来るので、３個がたての置き方は却下します。あとはＵとＸです。
+      ピースを使って、試して見るのも良いでしょう。下図は解答です。
+    </p>
+
+    <div class="center-box">
+      <img
+        src="./04.Pentomino/P453-0025S.png"
+        width="500"
+        alt="Pentomino Puzzle"
+      />
+    </div>
+
+    <h2><br />テトラキューブ(Tetracube)</h2>
+    <p>
+      ペントミノは立方体５個を平面に並べた組み合わせの１２種のピースを使います。
+      ペンタは５個を意味するラテン語のペンタから来ています。
+      ４個を意味するテトラでもテトラミノが有り、ピースは５種類です。この場合全部で２０個の立方体と
+      なりますが、４Ｘ５＝２０には綺麗に入りません。２セット分の４０ピースを使うと幾つかの解答が出来ます。<br />
+      ４個の立方体を平面に並べる代わりに立体に並べると８ピースのセットが出来ます。
+      このセットの事をテトラキューブと呼びます。テトラキューブを4X4X2の箱に収める仕方は695通りあります。
+      下図はテトラキューブの８ピースです。
+    </p>
+
+    <div class="center-box">
+      <img
+        src="02.Tetracube/Tetracube-8p.png"
+        width="500"
+        alt="Tetracube Image"
+      />
     </div>
 
     <p>テトラキューブの８ピースを4X4X2に纏めたところです。</p>
 
     <div class="center-box">
-        <img src="02.Tetracube/IMG_2263.png" width="600" alt="Tetracube Image">
+      <img src="02.Tetracube/IMG_2263.png" width="600" alt="Tetracube Image" />
     </div>
 
-    <p>上図の並べ方と下図の解答には共通点が有ります。それは4X2X2を2個並べた形と言う事です。
-        ８ピースを４ピースずつに分ける事で、組み合わせが減り、試行回数が激減します。</p>
-
-    <div class="center-box">
-        <img src="02.Tetracube/T442-0135.png" width="400" alt="Tetracube Image">
-    </div>
-
-    <p>次はテトラキューブの問題です。ピースＬは２つの境界を跨いでいるので、4X4X2を2個組み合わせた形にはなりません。
-        未収納ピースはＦＩＴの３個です。ピースＩとＴは水平に嵌ります。すると残りのＦは決まりました。
+    <p>
+      上図の並べ方と下図の解答には共通点が有ります。それは4X2X2を2個並べた形と言う事です。
+      ８ピースを４ピースずつに分ける事で、組み合わせが減り、試行回数が激減します。
     </p>
 
     <div class="center-box">
-        <img src="02.Tetracube/T442-0068.png" width="400" alt="Tetracube Image">
+      <img src="02.Tetracube/T442-0135.png" width="400" alt="Tetracube Image" />
+    </div>
+
+    <p>
+      次はテトラキューブの問題です。ピースＬは２つの境界を跨いでいるので、4X4X2を2個組み合わせた形にはなりません。
+      未収納ピースはＦＩＴの３個です。ピースＩとＴは水平に嵌ります。すると残りのＦは決まりました。
+    </p>
+
+    <div class="center-box">
+      <img src="02.Tetracube/T442-0068.png" width="400" alt="Tetracube Image" />
     </div>
 
     <p>答えです。</p>
 
     <div class="center-box">
-        <img src="02.Tetracube/T442-0068S.png" width="400" alt="Tetracube Image">
+      <img
+        src="02.Tetracube/T442-0068S.png"
+        width="400"
+        alt="Tetracube Image"
+      />
     </div>
 
-    <h2><br>
-        3D Models (STL)</h2>
-    <p>テトラキューブの３Ｄプリンタ用ＳＴＬデータです。
-    </p>
+    <h2>
+      <br />
+      3D Models (STL)
+    </h2>
+    <p>テトラキューブの３Ｄプリンタ用ＳＴＬデータです。</p>
     <h3>テトラキューブ ８ピース（16㎜）</h3>
 
     <div class="center-box">
-        <a href=".\02.Tetracube\Tetracube_16\TetraC16_8PC.STL" download=”TetraC16_8PC.STL”>
-            <img src="02.Tetracube\TetraC16_8PC.png" width="440" alt="Tetracube Puzzle" style="cursor: pointer;">
-            <p>※画像をクリックするとファイル(TetraC16_8PC.STL)がダウンロードできます</p>
-        </a>
+      <a
+        href=".\02.Tetracube\Tetracube_16\TetraC16_8PC.STL"
+        download="”TetraC16_8PC.STL”"
+      >
+        <img
+          src="02.Tetracube\TetraC16_8PC.png"
+          width="440"
+          alt="Tetracube Puzzle"
+          style="cursor: pointer"
+        />
+        <p>
+          ※画像をクリックするとファイル(TetraC16_8PC.STL)がダウンロードできます
+        </p>
+      </a>
     </div>
 
     <h3>テトラキューブ 16mm角 BOX-4X4X2</h3>
 
     <div class="center-box">
-        <a href="02.Tetracube\Tetracube_16\TetracubeD16C442A.STL" download=”TetracubeD16C442A.STL”>
-            <img src="02.Tetracube\TetraC16_442A.png" width="440" alt="Tetracube Puzzle" style="cursor: pointer;">
-            <p>※画像をクリックするとファイル(TetraC16_442A.STL)がダウンロードできます</p>
-        </a>
+      <a
+        href="02.Tetracube\Tetracube_16\TetracubeD16C442A.STL"
+        download="”TetracubeD16C442A.STL”"
+      >
+        <img
+          src="02.Tetracube\TetraC16_442A.png"
+          width="440"
+          alt="Tetracube Puzzle"
+          style="cursor: pointer"
+        />
+        <p>
+          ※画像をクリックするとファイル(TetraC16_442A.STL)がダウンロードできます
+        </p>
+      </a>
     </div>
-
-    
-
-   
-</body>
-</html><!DOCTYPE html>
-
+  </body>
+</html>
+<!doctype html>
